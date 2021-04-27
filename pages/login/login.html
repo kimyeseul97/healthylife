@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<title>join</title>
+<link rel="stylesheet" href="/css/common.css">
+<link rel="stylesheet" href="/css/login.css">
+<link rel="stylesheet" href="/library/fontawesome-free-5.15.3-web/css/all.min.css">
+<script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+
+</head>
+
+<body>
+	<header>
+			<div class="gnb">
+                <div class="logo">
+                    <a href="/index.html"><h2>healthylife</h2></a>
+                </div>
+                <ul class="nav">
+					<li><a href="/pages/login/join.html">가입</a></li>
+                    <li><a href="/pages/login/login.html">로그인</a></li>
+                    <li><a href="/pages/menu/bmi.html">self 건강진단</a></li>
+                    <li><a href="/pages/menu/map.html">장소검색</a></li>
+                    <li><a href="/pages/menu/weather.html">운동날씨</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+        <div class="container">
+            <div class="login_container">
+                <!-- 오른쪽부분 -->
+                <div class="login_right">
+                    <div class="top_logo">
+                    </div>
+                    <h1>Login</h1>
+                    <p>welcome</p>
+                </div>
+                <!-- 왼쪽부분 -->
+                <div class="login_left">
+                    <div class="login_input_container">
+                        <div class="login_input_wrap">
+                            <i class="far fa-envelope"></i>
+                            <input placeholder="Email" type="text">
+                        </div>
+                        <div class="login_input_wrap">
+                            <i class="fas fa-key"></i>
+                            <input placeholder="Password" type="password">
+                        </div>
+                    </div>
+
+                    <div class="login_btn_wrap">
+                        <button class="login_btn">Login</button>
+                        </br>
+                        <a id="kakao-login-btn"></a>
+                        <a href="http://developers.kakao.com/login"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+<!-- 카카오 연동 로그인 -->
+    <script type='text/javascript'>
+            //<![CDATA[
+           // 사용할 앱의 JavaScript 키를 설정해 주세요.
+           Kakao.init('e3aaa61ff244ea2fcdf3b04a2c799db6');
+           
+           // 카카오 로그인 버튼을 생성합니다.
+           Kakao.Auth.createLoginButton({
+             container: '#kakao-login-btn',
+             success: function(authObj) {
+            alert(JSON.stringify(authObj));
+             },
+             fail: function(err) {
+             alert(JSON.stringify(err));
+             }
+           });
+            //
+    </script>
+
+	<!--js 파일-->
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<script src="js/login.js"></script>
+</body>
+</html>
+
+

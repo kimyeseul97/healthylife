@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<title>메뉴3 bmi</title>
+<link rel="stylesheet" href="/css/common.css">
+<link rel="stylesheet" href="/css/bmi.css">
+<link rel="stylesheet" href="/library/fontawesome-free-5.15.3-web/css/all.min.css">
+</head>
+
+<body>
+	<header>
+			<div class="gnb">
+                <div class="logo">
+                    <a href="/index.html"><h2>healthylife</h2></a>
+                </div>
+                <ul class="nav">
+					<li><a href="/pages/login/join.html">가입</a></li>
+                    <li><a href="/pages/login/login.html">로그인</a></li>
+                    <li><a href="/pages/menu/bmi.html">self 건강진단</a></li>
+                    <li><a href="/pages/menu/map.html">장소검색</a></li>
+                    <li><a href="/pages/menu/weather.html">운동날씨</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+        <div id="container">
+            <h2>Check your body</h2>
+        </div>
+    
+        <div class="content">
+                <!-- bmi계산식 -->
+            <div id="Bmi"> -->
+                <p>나이 : <input type ="number" id ="age"> 세</p>
+                <p>키 : <input type ="number" id ="height"> m</p>
+                <p>몸무게 : <input type ="number" id ="weight"> kg</p>
+                <p><input type ="button" id ="button" value ="확인"></p>
+                <p id="bmi"></p> <!--bmi를 출력할 부분-->
+            </div>
+
+            <div id="graph">
+                	<!--성별차트-->
+                <canvas id="doughnut" width="350" height="400"></canvas>
+            </div>
+
+            <div id="graph">
+                    <!-- 나이별 차트 -->
+                <canvas id="myChart" width="350" height="400"></canvas>
+            </div>
+        </div>
+
+        <section id="add">
+            <h2>신체질량지수에 의한 비만도 계산법</h2>
+            <p>계산식: 신체질량지수(BMI)=체중(kg)/[신장(m)]2</p>
+            <h3>판정기준</h3>
+            <p>저체중	20 미만</p>
+            <p>정상	20 - 24</p>
+            <p>과체중	25 - 29</p>
+            <p>비만	30 이상</p>
+        </section>
+
+        <footer class="footer">
+                <p>© 2021 Healthylife by kimyeseul</p>
+        </footer>
+
+
+	<!--js 파일-->
+	<script src="/js/jquery-3.6.0.min.js"></script>
+    <!-- bmi 계산 js -->
+    <script src="/js/bmi.js"></script> 
+
+    <!-- chart.js 라이브러리 이용  -->
+    <script src="/js/chart.min.js"></script> 
+    <script src="/js/Bmi_chart.js"></script> 
+
+
+</body>
+</html>
+
+
