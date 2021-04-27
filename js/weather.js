@@ -1,3 +1,6 @@
+// 날씨정보 불러오기
+
+
 const weather = document.querySelector(".js-weather"),
   weatherIcon = document.querySelector(".js-weatherIcon"),
   temperature = document.querySelector(".js-temperature"),
@@ -6,14 +9,17 @@ const weather = document.querySelector(".js-weather"),
 const API_KEY = "e22d0c5998d33d1993a4a74eb94e5b41";
 const GEO = "geo";
 
+// 아이콘
 function getIcon(icon) {
   weatherIcon.src = `https://openweathermap.org/img/wn/${icon}@2x.png`;
 }
 
+// 온도
 function getTemperature(temp) {
   temperature.innerText = `${Math.floor(temp)}º`;
 }
 
+// 장소
 function getLocation(place) {
   loc.innerText = place;
 }

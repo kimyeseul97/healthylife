@@ -1,60 +1,65 @@
 @charset "utf-8";
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Alata', sans-serif;
-}
-
-.gnb {
-    padding-top: 0px;
-    margin-top: 0px;
-}
-
-#container{
-    width: 100%;
-    height: 150px;
-    background-color: rgb(211, 211, 211);
-    position: static;
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 100%
-}
-
-#container h2 {
-    text-align:center;
-    font-size:50px;
-    color: rgb(255, 255, 255);
-}
-
 .content {
     display: inline-block;
     margin-left: 400px;
     margin-top: 20px;
+    flex-direction: column;
+
 }
 
 .content #graph {
     float: right;
     width: auto;
     height: auto;
-    margin-right: 60px;
-}
-
-.content #Bmi{
-    position: relative;
-    display: inline-block;
-    width: auto;
-    height: auto;
-    margin-right: 60px;
+    flex-direction: column;
 }
 
 #add{
     width: 100%;
-    height: 200px;
+    height: 250px;
     background-color: rgb(236, 236, 236);
     position: static;
     display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 100%
 }
+
+/* bmi 계산 부분 */
+
+.content #Bmi{
+    padding-top: 40px;
+    position: relative;
+    font-size: 16px;
+    float: left;
+    margin-right: 30px;
+    margin-left: 10px;
+    margin-top: 20px;
+
+/* position: absolute; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10px;
+  height: 350px;
+  width: 300px;
+  border-radius: 10px;
+  background-color: rgba(196, 196, 196, 0.233);
+}
+
+.content #Bmi #button{
+    width:220px;
+    height:40px;
+    color:rgb(0, 0, 0);
+    border: 0px;
+    border-radius: 4px;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(162deg,#ffffff 0%, #ffffff 100%);
+}
+
+.content #Bmi input{
+    background: rgb(255, 255, 255);
+    border: 0px;
+    border-radius: 4px;
+    width:150px;
+    height:40px;
+}
+

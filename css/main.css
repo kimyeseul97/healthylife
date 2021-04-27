@@ -1,12 +1,5 @@
 @charset "utf-8";
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Alata', sans-serif;
-}
-
 /* 풀스크린 배경 */
 .bg {
     min-width: 1024px;
@@ -24,8 +17,7 @@
     font-size:50px; 
     text-align:right;
     color: rgb(255, 255, 255);
-    /* font-style:italic;				 */
-    /* text-shadow:2px 2px 3px rgb(138, 137, 137), 2px 2px 3px rgb(212, 212, 212); */
+
     /* 홈페이지 가운데 정렬 */
     position:absolute;
     top: 40%;
@@ -38,20 +30,12 @@
     color:rgb(255, 255, 255);
     font-size:60px; 
     text-align:right;
-    /* font-style:italic;			 */
-    /* text-shadow:2px 2px 3px rgb(133, 131, 131), 2px 2px 3px rgb(212, 212, 212);	 */
+
     /* 홈페이지 가운데 정렬 */
     position:absolute;
     top:55%;
     left:50%;
     transform:translate(-50%, -50%);
-}
-
-.footer {
-    overflow: hidden;
-    box-sizing: border-box;
-    width: 1024px;
-    margin: 0 auto;
 }
 
 
@@ -60,4 +44,6 @@
         left: 50%;
         margin-left: -512px;
     }
+
 }
+

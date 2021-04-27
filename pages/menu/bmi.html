@@ -13,7 +13,7 @@
 	<header>
 			<div class="gnb">
                 <div class="logo">
-                    <a href="/index.html"><h2>healthylife</h2></a>
+                    <a href="/index.html"><h2><i class="fas fa-dumbbell"></i> healthylife</h2></a>
                 </div>
                 <ul class="nav">
 					<li><a href="/pages/login/join.html">가입</a></li>
@@ -32,11 +32,15 @@
     
         <div class="content">
                 <!-- bmi계산식 -->
-            <div id="Bmi"> -->
-                <p>나이 : <input type ="number" id ="age"> 세</p>
-                <p>키 : <input type ="number" id ="height"> m</p>
+            <div id="Bmi"> 
+                <h3>BMI측정</h3>
+                </br>
+                <p>키 : <input type ="number" id ="height"> cm</p>
+                </br>
                 <p>몸무게 : <input type ="number" id ="weight"> kg</p>
+                </br>
                 <p><input type ="button" id ="button" value ="확인"></p>
+            </br>
                 <p id="bmi"></p> <!--bmi를 출력할 부분-->
             </div>
 
@@ -51,15 +55,15 @@
             </div>
         </div>
 
-        <section id="add">
-            <h2>신체질량지수에 의한 비만도 계산법</h2>
+        <div id="add">
+            <h2>신체질량지수 비만도 계산법</h2>
             <p>계산식: 신체질량지수(BMI)=체중(kg)/[신장(m)]2</p>
             <h3>판정기준</h3>
-            <p>저체중	20 미만</p>
-            <p>정상	20 - 24</p>
-            <p>과체중	25 - 29</p>
-            <p>비만	30 이상</p>
-        </section>
+            <p>저체중:  20 미만</p>
+            <p>정상:    20 - 24</p>
+            <p>과체중:  25 - 29</p>
+            <p>비만:    30 이상</p>
+        </div>
 
         <footer class="footer">
                 <p>© 2021 Healthylife by kimyeseul</p>

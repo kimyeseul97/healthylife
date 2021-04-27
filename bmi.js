@@ -1,6 +1,6 @@
 function buttonClick(){
     bmiValue = weight.value / ((height.value/100) * (height.value/100));
-    bmi.innerHTML = `당신의 bmi는 ${bmiValue.} 입니다.`; 
+    bmi.innerHTML = `당신의 bmi는 ${bmiValue.toFixed(1)} 입니다.`; 
 } // bmi == 몸무게 / 키^2
 
 let height = document.getElementById("height");

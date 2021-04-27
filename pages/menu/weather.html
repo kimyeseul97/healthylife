@@ -1,76 +1,46 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<title>메뉴1 weather</title>
-<link rel="stylesheet" href="/css/common.css">
-<link rel="stylesheet" href="/css/weather.css">
-<link rel="stylesheet" href="/library/fontawesome-free-5.15.3-web/css/all.min.css">
+<title>날씨 가져오기</title>
+
+<!-- viewport 설정 
+너비는 디바이스의 너비로 확대 축소는 안되도록-->
+<meta name="viewport"
+content="width=device-width, user-scalable=no">
+
+<!-- 스타일시트 파일 경로 설정 -->
+<link rel="stylesheet" href="/css/weather copy.css">
+
+<!-- jquery 사용을 위한 설정 -->
+<script src="/js/jquery-3.6.0.min.js"></script>
+<!-- 사용자 정의 스크립트 사용을 위한 설정 -->
+<script src="/js/weather copy.js"></script>
 </head>
 
 <body>
-	<header>
-			<div class="gnb">
-                <div class="logo">
-                    <a href="/index.html"><h2>healthylife</h2></a>
-                </div>
-                <ul class="nav">
-					<li><a href="/pages/login/join.html">가입</a></li>
-                    <li><a href="/pages/login/login.html">로그인</a></li>
-                    <li><a href="/pages/menu/bmi.html">self 건강진단</a></li>
-                    <li><a href="/pages/menu/map.html">장소검색</a></li>
-                    <li><a href="/pages/menu/weather.html">운동날씨</a></li>
-                </ul>
-            </div>
-        </div>
-    </header>
-
-        <div id="container">
-            <h2>Todays weather</h2>
-            <!-- <p>What kind of exercise do you want to do?</p> -->
-        </div>
-    </br>
-
-        <h3 style="text-align: center; font-size: 30px; font-weight: lighter;">Recommended exercise of the day</h3>
-    </br>
-
-
-        <div class="weatherBox">
-            <div class="subWeatherBox">
-              <img class="js-weatherIcon weatherIcon"></img>
-              <span class="js-temperature temperature"></span>
-            </div>
-            <div class="js-weather weather"></div>
-            <div class="js-location location"></div>
-        </div>
-
-          <!-- 이미지 상자 -->
-        <div class="imgBox">
-            <div class="chageIMG"></div>
-            <div class="sun">
-	<!-- <img id="imgID" class="imgClass" src="img/구름.jpg"/> -->
-                <a><img src="" alt=""></a>
-                <a><img src="" alt=""></a>
-                <a><img src="" alt=""></a>
-            </div>
-            <div class="rain">
-                <a><img src="" alt=""></a>
-                <a><img src="" alt=""></a>
-                <a><img src="" alt=""></a>
-            </div>
-        </div> 
-
-        <footer>
-            <p>© 2021 Healthylife by kimyeseul</p>
-        </footer>
-
-
-	<!--js 파일-->
-	<script src="/js/jquery-3.6.0.min.js"></script>
-	<script src="/js/weather.js"></script>
-	<script src="/js/img.js"></script>
+	<div id="weather_info">
+		<!-- 도시이름 출력 영역 -->
+		<h1 class="city"></h1>
+		
+		<section>
+			<!-- 날씨와 아이콘 출력 영역 -->
+			<p class="w_id"></p>
+			<figure class="icon"></figure>
+			
+			<!-- 온도 출력 영역 -->
+			<aside>
+				<p class="temp_max">max</p>
+				<p class="temp_min">min</p>
+			</aside>
+		</section>
+		
+		<!-- 로딩 이미지 출력 -->
+		<img class="load_img" 
+		src="images/loading.gif"
+		width="50px" />
+	</div>
 </body>
+
 </html>
-
-
+ 
