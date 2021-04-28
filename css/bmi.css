@@ -5,7 +5,6 @@
     margin-left: 400px;
     margin-top: 20px;
     flex-direction: column;
-
 }
 
 .content #graph {
@@ -16,11 +15,14 @@
 }
 
 #add{
-    width: 100%;
+    width: 400px;
     height: 250px;
     background-color: rgb(236, 236, 236);
     position: static;
     display: grid;
+}
+
+#add{ 
 }
 
 /* bmi 계산 부분 */
@@ -62,4 +64,33 @@
     width:150px;
     height:40px;
 }
+
+
+
+
+
+ /* 창크기조절 */
+
+ /* 스마트폰 */
+/* 창크기 최대 680이하일떄 */
+@media screen and (max-width:680px) {
+  .content {
+    margin: auto ;
+  }
+}
+
+/* 태블릿 */
+/* 690이상 1024이하*/
+@media screen and (min-width:680px) and (max-width:1150px) {
+  .content {
+    margin: auto;
+  }
+}
+
+@media screen and (max-width:1024px) {
+  .content {
+    margin: auto;
+  }
+}
+
 
