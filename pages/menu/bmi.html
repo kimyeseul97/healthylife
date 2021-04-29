@@ -29,6 +29,9 @@
         <div id="container">
             <h2>Check your body</h2>
         </div>
+        </br>
+            <h3 style="text-align: center; font-size: 25px; font-weight: lighter; padding-top:30px; padding-bottom: 30px;">Check my physical condition!</h3>
+        </br>
     
         <div class="content">
                 <!-- bmi계산식 -->
@@ -46,12 +49,12 @@
 
             <div id="graph">
                 	<!--성별차트-->
-                <canvas id="doughnut" width="350" height="400"></canvas>
+                <canvas id="doughnut" width="400" height="450"></canvas>
             </div>
 
             <div id="graph">
                     <!-- 나이별 차트 -->
-                <canvas id="myChart" width="350" height="400"></canvas>
+                <canvas id="myChart" width="400" height="450"></canvas>
             </div>
         </div>
 
@@ -63,6 +66,20 @@
             <p>정상:    20 - 24</p>
             <p>과체중:  25 - 29</p>
             <p>비만:    30 이상</p>
+        </div>
+
+        <aside id="left">
+            <img src="../../images/BMI.webp" alt="">
+        </aside>
+
+        <div id="add_two">
+            <h2>체질량지수 줄이는 방법</h2>
+            <p>체질량지수 또는 BMI는 키와 체중의 비율을 사용해 지방의 양을 추정하는 비만 측정법이다. 만약 체질량지수를 측정했는데 정상적인 수치보다 높게, 또는 과체중으로 나왔다면, BMI를 낮추는 방법이 있으니 참고해보자. </p>
+            <p>체질량지수가 높으면 다양한 건강상 문제를 겪을 수도 있으니 주의한다.</p>
+            <h3>1. 식단바꾸기</h3>
+            <p>건강한 식단 섭취하기. 체질량지수를 낮추길 원한다면 먼저 식단을 바꿀 필요가 있다. 건강하지 않은 식단은 체질량지수를 쉽게 높일 수 있기 때문이다. 건강하고 균형 잡힌 식단을 유지할 수 있게 노력하자.</p>
+            <h3>2. 신체적 활동량 늘리기</h3>
+            <p>운동하기. 체질량지수에 변화를 주고 싶다면 정기적인 운동을 일과에 넣어줄 필요가 있다. 처음에는 운동을 일과에 포함시키는 것을 목표로 잡고 몸이 익숙해짐에 따라 체질량지수를 줄이는 것을 목표로 선택하도록 하자.</p>
         </div>
 
         <footer class="footer">
@@ -78,7 +95,7 @@
     <!-- chart.js 라이브러리 이용  -->
     <script src="/js/chart.min.js"></script> 
     <script src="/js/Bmi_chart.js"></script> 
-
+    <script src="js/common.js"></script>
 
 </body>
 </html>

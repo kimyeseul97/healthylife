@@ -5,8 +5,8 @@
     min-width: 1024px;
     min-height: 100%;
     width: 100%;
-    height: auto;
-    position: fixed;
+    height: 100%;
+    position: relative;
     top: 0;
     left: 0;
     opacity: 80%;
@@ -39,11 +39,51 @@
 }
 
 
-@media screen and (max-width:1024px) {
+
+
+/* 창크기조절 */
+
+ /* 스마트폰 */
+/* 창크기 최대 680이하일떄 */
+ @media screen and (max-width:680px) {
+     #content h1{
+         font-size: 24px;
+     }
+     #clock{
+        font-size: 21px;
+     }
+     .bg {
+        width: auto;
+        height: auto;
+    }
+  }
+
+/* 태블릿 */
+/* 680이상 12804이하*/
+  @media screen and (min-width:680px) and (max-width:1150px) {
+    #content h1{
+        font-size: 35px;
+    }
+    #clock{
+       font-size: 35px;
+    }
+    .bg {
+        width: auto;
+        height: auto;
+    }
+   }
+
+   /* 최대 1024이하일때 */
+  @media screen and (max-width:1024px) {
     .bg {
         left: 50%;
         margin-left: -512px;
     }
+} 
 
-}
-
+/* 창크기 280이하 일때 */
+@media screen and (max-width:280px) {
+    #clock{
+        padding-top: 30px;
+     }
+} 

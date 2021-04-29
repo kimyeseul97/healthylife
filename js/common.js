@@ -1,8 +1,6 @@
-var resizeTimer;
-$(window).bind('resize', function( ) {
-    window.clearTimeout( resizeTimer );
-    resizeTimer = window.setTimeout( resizeFunction, 500 );
+$(document).ready(function(){
+ 
+	$('.trigger a').on('click', function(){
+		$('.nav li').show(); 
+	});
 });
-function resizeFunction(){
-//리사이즈시 실행할 코드
-}

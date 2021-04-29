@@ -1,90 +1,93 @@
-// 날씨정보 불러오기
+$(function(){
+	//요청 주소 만들기
+	var addr = 
+		'http://api.openweathermap.org/data/2.5/weather?q=incheon&APPID=e22d0c5998d33d1993a4a74eb94e5b41';
+	$.ajax({
+		url:addr,
+		type:'get',
+		data:{},
+		success:function(result){
+			//데이터 확인
+			//console.log(result);
+			//국가명과 일출과 일몰 - 객체
+			var sys = result.sys;
+			//도시이름 정보 - 문자열
+			var name = result.name;
+			//날씨 - 배열
+			var weather = result.weather;
+			//온도 - 객체
+			var main = result.main;
+			
+			//국가명
+			var country = sys.country;
+			
+			//현재, 최고 , 최저 기온 가져오기
+			var temp = main.temp;
+			var temp_min = main.temp_min;
+			var temp_max = main.temp_max;
+			
+			//구름상태, 날씨상태 코드, 날씨 아이콘 정보
+			var wid = weather[0].id;
+			var icon = weather[0].icon;
+			
+			//아이콘 가져오기
+			var icon_url = 
+				"https://openweathermap.org/img/w/" + icon;
+					
+			//데이터 출력
+			//도시이름과 국가를 출력
+			$(".city").html(name + "/" + country);
+		
+			//도시이름과 국가를 출력
+			$(".weather").html(result.weather);
+
+			//아이콘 출력
+			$(".icon").html("<img src='" + 
+					icon_url + ".png'/>");
+
+			//온도 출력
+			$(".temp").html('현재기온:' + 	parseInt((temp-273.15)) + '&deg;');
+			$(".temp_max").html('최고기온:' +	parseInt((temp_max-273.15)) + '&deg;');
+			$(".temp_min").html('최저기온:' +	parseInt((temp_min-273.15)) + '&deg;');
+
+		}
+	});
+});
+
+//조건에 맞는 운동 추천
+$(document).ready(function(){
+	if($(".icon").is('04d.png','09d.png','10d.png','11d.png','13d.png')) {
+  		// alert("참")/
+		  $("#rain").attr('style', 'display:show');
+		  $("#sun").attr('style','display:none');
+
+    } else  {
+    //   alert("아니다")	
+		  $("#rain").attr('style', 'display:none');
+		  $("#sun").attr('style','display:show');
+	}
+});
 
 
-const weather = document.querySelector(".js-weather"),
-  weatherIcon = document.querySelector(".js-weatherIcon"),
-  temperature = document.querySelector(".js-temperature"),
-  loc = document.querySelector(".js-location");
+// $(document).ready(function(){
+// 	if(icon.value=='cloud') {
+//   		// alert("참")/
+// 		  $("#rain").attr('style', 'display:show');
+// 		  $("#sun").attr('style','display:none');
 
-const API_KEY = "e22d0c5998d33d1993a4a74eb94e5b41";
-const GEO = "geo";
+//     } else  {
+//     //   alert("아니다")	
+// 		  $("#rain").attr('style', 'display:none');
+// 		  $("#sun").attr('style','display:show');
+// 	}
+// });
 
-// 아이콘
-function getIcon(icon) {
-  weatherIcon.src = `https://openweathermap.org/img/wn/${icon}@2x.png`;
-}
 
-// 온도
-function getTemperature(temp) {
-  temperature.innerText = `${Math.floor(temp)}º`;
-}
+//사진 액션
+$(document).ready(function(){
+    $("#rain").bxSlider();
+  });
 
-// 장소
-function getLocation(place) {
-  loc.innerText = place;
-}
-
-function getDetail(description) {
-  weather.innerText = description;
-}
-
-function getGeo(lat, lon) {
-  fetch(
-    `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric&lang=kr`
-  )
-    .then((response) => {
-      return response.json();
-    })
-    .then((json) => {
-      const temp = json.main.temp;
-      const place = json.name;
-      const main = json.weather[0].main;
-      const description = json.weather[0].description;
-      const icon = json.weather[0].icon;
-
-      paintImage(main);
-      getIcon(icon);
-      getTemperature(temp);
-      getLocation(place);
-      getDetail(description);
-    });
-}
-
-function saveCoords(coordsObj) {
-  localStorage.setItem(GEO, JSON.stringify(coordsObj));
-}
-
-function handleGeoSuccess(position) {
-  const latitude = position.coords.latitude;
-  const longitude = position.coords.longitude;
-  const coordsObj = {
-    latitude,
-    longitude,
-  };
-  saveCoords(coordsObj);
-  getGeo(latitude, longitude);
-}
-
-function handleGeoError() {
-  console.log("Can't access geo location");
-}
-
-function askForGeo() {
-  navigator.geolocation.getCurrentPosition(handleGeoSuccess, handleGeoError);
-}
-
-function loadGeo() {
-  const loadedGeo = localStorage.getItem(GEO);
-  if (loadedGeo === null) {
-    askForGeo();
-  } else {
-    const parseGeo = JSON.parse(loadedGeo);
-    getGeo(parseGeo.latitude, parseGeo.longitude);
-  }
-}
-
-function init() {
-  loadGeo();
-}
-
-init();
+  $(document).ready(function(){
+    $("#sun").bxSlider();
+  });

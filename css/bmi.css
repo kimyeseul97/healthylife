@@ -1,59 +1,83 @@
 @charset "utf-8";
 
 .content {
-    display: inline-block;
-    margin-left: 400px;
-    margin-top: 20px;
     flex-direction: column;
-}
+    margin: 0 auto;
+    align-items: center;
+    /* 열정렬 */
+    display: table;
+  }
 
 .content #graph {
-    float: right;
-    width: auto;
-    height: auto;
-    flex-direction: column;
+    flex-direction: row;
+    /* 열정렬 */
+    vertical-align: middle;
+    display: table-cell;
 }
 
 #add{
-    width: 400px;
-    height: 250px;
-    background-color: rgb(236, 236, 236);
+    padding-top: 10px;
+    padding-left: 70px;
+    margin-top: 100px;
+    width: 800px;
+    height: 400px;
+    background-color: rgb(255, 254, 204);
     position: static;
     display: grid;
+    margin-left: 300px;
 }
 
-#add{ 
+#add_two{
+  padding-top: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 500px;
+  width: 800px;
+  height: 500px;
+  background-color: rgb(255, 254, 204);
+  position: static;
+  display: grid;
+  margin-left: 300px;
+}
+
+#left img{
+  width: 750px;
+  height: 500px;
+  float: right;
+  position: static;
+  display: grid;
+  margin-right:300px;
 }
 
 /* bmi 계산 부분 */
 
 .content #Bmi{
-    padding-top: 40px;
-    position: relative;
-    font-size: 16px;
-    float: left;
-    margin-right: 30px;
-    margin-left: 10px;
-    margin-top: 20px;
-
-/* position: absolute; */
+  margin-top: 30px;
+  /* 열정렬 보여줌 */
+  vertical-align: middle;
+  display: table-cell;
+  padding-top: 70px;
+  font-size: 17px;
+  /* 상자안으로 들어오게 보여줌 */
   display: flex;
+  /* 열정렬 */
   flex-direction: column;
+  /* 가운데 정렬 */
   align-items: center;
   padding-bottom: 10px;
-  height: 350px;
+  height: 400px;
   width: 300px;
   border-radius: 10px;
   background-color: rgba(196, 196, 196, 0.233);
 }
 
 .content #Bmi #button{
+    font-size: 18px;
     width:220px;
     height:40px;
     color:rgb(0, 0, 0);
     border: 0px;
     border-radius: 4px;
-    background: rgb(255, 255, 255);
     background: linear-gradient(162deg,#ffffff 0%, #ffffff 100%);
 }
 
@@ -61,8 +85,8 @@
     background: rgb(255, 255, 255);
     border: 0px;
     border-radius: 4px;
-    width:150px;
-    height:40px;
+    width:160px;
+    height:42px;
 }
 
 
@@ -76,6 +100,12 @@
 @media screen and (max-width:680px) {
   .content {
     margin: auto ;
+  }
+  .content #graph {
+    display: block;
+  }
+  #add,#add_two,#left img {
+    margin: auto;
   }
 }
 
@@ -94,3 +124,45 @@
 }
 
 
+/* 창크기조절 */
+
+ /* 스마트폰 */
+/* 창크기 최대 680이하일떄 */
+@media screen and (max-width:680px) {
+
+}
+/* 태블릿 */
+/* 680이상 1150이하*/
+@media screen and (min-width:680px) and (max-width:1150px) {
+  * {
+    margin: auto;
+  }
+  .content {
+    display: table;
+  }
+  #add, #add_two, #left{
+    margin: 0 auto ;
+  }
+}
+
+/* 최대 1024이하일때 */
+@media screen and (max-width:1024px) {
+  .content {
+    display: block;
+  }
+}
+
+/* 창크기 280이하 일때 */
+@media screen and (max-width:280px) {
+  .content {
+    margin: auto;
+  }
+}
+
+/* 창크기 280이하 일때 */
+@media screen and (min-width:1200px) {
+  .content {
+    size: 1px;
+    margin: auto;
+  }
+}

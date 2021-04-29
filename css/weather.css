@@ -1,78 +1,120 @@
-* {
-	margin: 0;
-	font-weight: normal;
+@charset "utf-8";
+
+/* 컨텐츠 */
+#contents{
+  /* 열정렬 */
+  display: table;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  align-items: center;
 }
 
-p {
-	margin-bottom: 10px;
+/* 날씨박스 */
+.weatherBox {
+  font-size: 17px;
+  /* 상자안으로 들어오게 보여줌 */
+  /* display: flex; */
+  /* 열정렬 */
+  flex-direction: column;
+  /* 가운데 정렬 */
+  align-items: center;
+
+  height: 400px;
+  width: 400px;
+  border-radius: 10px;
+  background-color: rgba(196, 196, 196, 0.233);
+
+      /* 열정렬 */
+      vertical-align: middle;
+      display: table-cell;
 }
 
-body {
-	color: #333;
-	font-size: 100%;
-	font-family: sans-serif;
+.icon {
+  padding-top: 20px;
 }
 
-#weather_info {
-	position: relative;
-	width: 100%;
-	border: 1px solid #999;
-	box-sizing: border-box;
-	padding: 10px;
-	background: #eee;
-	background:
-		url("https://lintvwkbn.files.wordpress.com/2016/03/youngstown-ohio-weather-forecast-cloudy-7.jpg")
-		no-repeat;
-	background-size: cover;
-	color: white;
+.icon img {
+  width: 150px;
 }
 
-h1 {
-	background: #666;
-	padding: 10px;
-	font-size: 1.8em;
-	text-align: center;
-	opacity: 0.8;
+.temperature {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-weight: bold;
 }
 
-section {
-	overflow: hidden;
-	color: #666;
-	text-shadow: 1px 1px 1px #999;
-	padding: 10px 20px;
+.subWeatherBox .weather {
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+  /* margin-top: -10px;
+  font-weight: bold; */
 }
 
-section>.w_id {
-	text-align: left;
-	padding-left: 20px;
+.city {
+  color: rgb(0, 0, 0);
+  font-size: 35px;
+  font-weight: bold;
+  margin-top: 8px;
 }
 
-section>figure, section>.temp {
-	float: left;
-	width: 33.3%;
+.imgBox {
+  width: 400px;
+  border-radius: 10px;
+  background-color: rgba(160, 124, 124, 0.233);
+        /* 열정렬 */
+        vertical-align: middle;
+        display: table-cell;
 }
 
-section>figure>img {
-	width: 80px;
+.imgBox img {
+  width: 400px;
+  height: 200px;
 }
 
-section>.temp {
-	font-size: 3.4em;
+#rain img{
+  width: 450px;
+  height: 400px;
 }
 
-aside {
-	overflow: hidden;
+#sun img{
+  width: 450px;
+  height: 400px;
 }
 
-aside>p {
-	font-size: 1.8em;
-	text-align: right;
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-/* 로딩이미지 */
-#weather_info .load_img {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	display: none;
+
+
+/* 창크기조절 */
+
+ /* 스마트폰 */
+/* 창크기 최대 680이하일떄 */
+@media screen and (max-width:680px) {
+  #content {
+    margin: auto;
+  }
+}
+
+/* 태블릿 */
+/* 690이상 1024이하*/
+@media screen and (min-width:680px) and (max-width:1280px) {
+  #content {
+    margin: auto;
+  }
+}
+
+/* 최대 1024이하일때 */
+@media screen and (max-width:1280px) {
+  #content {
+    margin: auto;
+  }
 }

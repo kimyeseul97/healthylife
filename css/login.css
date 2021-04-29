@@ -106,3 +106,35 @@
         background: rgb(254, 255, 196);
         background: linear-gradient(162deg,#dddddd 0%, #cacaca 100%);
     }
+
+
+
+     /* 스마트폰 */
+/* 창크기 최대 680이하일떄 */
+@media screen and (max-width:680px) {
+    .login_container {
+        width: auto;
+        height: auto;
+    }
+    .login_right h1 {
+        font-size: 20px;
+    }
+    .login_right p {
+        font-size: 10px;
+    }
+    .login_input_container{
+        padding-top: 5px;
+        padding-left: 0px;
+        margin-left: -150px;
+        width:100px;
+    }
+    .login_btn_wrap .login_btn{
+        margin-left: -70px;
+        width: 80px;
+    }
+    .login_input_container .login_input_wrap{
+        width:150px;
+        height: 80px;
+        margin-top: 10px;
+        border-bottom: solid 2px #adadad;
+    }

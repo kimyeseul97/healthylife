@@ -44,7 +44,7 @@
     }
 
     .login_right i{
-        color: #000000;
+        color: #868686;
         width: 50px;
         height: 50px;
     }
@@ -74,7 +74,7 @@
     }
 
     .login_input_container .login_input_wrap i{
-        color: #8b8b8b;
+        color: #acacac;
         line-height: 45px;
     }
 
@@ -87,7 +87,7 @@
     }
 
     .login_input_container .login_input_wrap ::-webkit-input-placeholder {
-        color:rgb(180, 180, 180);
+        color:rgb(175, 175, 175);
     }
 
     .login_btn_wrap{
@@ -106,3 +106,44 @@
         background: rgb(254, 255, 196);
         background: linear-gradient(162deg,#dddddd 0%, #cacaca 100%);
     }
+
+
+     /* 스마트폰 */
+/* 창크기 최대 680이하일떄 */
+ @media screen and (max-width:680px) {
+    .login_container {
+        width: auto;
+        height: auto;
+    }
+    .login_right h1 {
+        font-size: 20px;
+    }
+    .login_right p {
+        font-size: 10px;
+    }
+    .login_input_container{
+        padding-top: 5px;
+        padding-left: 0px;
+        margin-left: -80px;
+        width:100px;
+    }
+    .login_btn_wrap .login_btn{
+        width: 80px;
+    }
+    .login_input_container .login_input_wrap{
+        width:150px;
+        height: 80px;
+        margin-top: 10px;
+        border-bottom: solid 2px #adadad;
+} 
+
+
+
+  /* 최대 1024이하일때 */
+ @media screen and (max-width:1024px) {
+    .login_container {
+        width: auto;
+        height: auto;
+    }
+} 
+

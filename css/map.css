@@ -4,3 +4,21 @@
   margin-top: 50px;
 }
 
+ /* 창크기조절 */
+
+ /* 스마트폰 */
+/* 창크기 최대 680이하일떄 */
+@media screen and (max-width:680px) {
+  .mapBox {
+    margin: auto;
+    width: auto;
+  }
+}
+
+/* 태블릿 */
+/* 690이상 1024이하*/
+@media screen and (min-width:680px) and (max-width:1150px) {
+  .mapBox {
+    margin: auto;
+    width: auto;
+  }

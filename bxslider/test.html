@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/bxslider/bxslider-4-4.2.12/dist/jquery.bxslider.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="bxslider-4-4.2.12/dist/jquery.bxslider.min.js"></script>
+    <script src="bxslider-4-4.2.12/dist/jquery.bxslider.js"></script>
+    
+    <style>
+        .out img{
+            width: 450px;
+            height: 400px;
+        }
+        .in img{
+            width: 450px;
+            height: 400px;
+        }
+    </style>
+
+</head>    
+
+// Initialize the slider
+<script>
+  $(document).ready(function(){
+    $("#rain").bxSlider();
+  });
+
+  $(document).ready(function(){
+    $("#sun").bxSlider();
+  });
+</script>
+
+// Slider HTML (change this to your own!)
+<div id="rain">
+  <div><img src="/images/golf.webp" alt="">.</div>
+  <div><img src="/images/run.jpg" alt="">.</div>
+  <div><img src="/images/tracking.jpg" alt="">.</div>
+</div>
+
+<div id="sun">
+    <div><img src="/images/runningmachine.jpg" alt="">.</div>
+    <div><img src="/images/yoga.jpg" alt="">.</div>
+    <div><img src="/images/swim.jpg" alt="">.</div>
+  </div>
+<body>
+    
+</body>
+</html>

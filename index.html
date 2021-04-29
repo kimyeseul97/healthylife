@@ -9,10 +9,24 @@
 <link rel="stylesheet" href="library/fontawesome-free-5.15.3-web/css/all.min.css">
 </head>
 
+
 <body onload="printClock()">
 	<header>
-		<!-- 전체 배경 설정 -->
-		<img src="images/sports.webp" class="bg">
+		<div class="gnb">
+            <div class="logo">
+                <a href="/index.html"><h2><i class="fas fa-dumbbell"></i> healthylife</h2></a>
+            </div>
+             <ul class="nav">
+				<li><a href="./pages/login/join.html">가입</a></li>
+                <li><a href="./pages/login/login.html">로그인</a></li>
+                <li><a href="./pages/menu/bmi.html">self 건강진단</a></li>
+                <li><a href="./pages/menu/map.html">장소검색</a></li>
+                <li><a href="./pages/menu/weather.html">운동날씨</a></li>
+            </ul>
+        </div>
+		
+			<!-- 전체 배경 설정 -->
+			<img src="images/sports.webp" class="bg">
 			<!-- 시계 설정 -->
 			<div id="clock"> 
 			</div>
@@ -21,37 +35,17 @@
 				<h1>Exercise shortens the day, 
 				</br>but it makes your life longer</h1>
 			</div>
-
-			<div class="gnb">
-                <div class="logo">
-                    <a href="/index.html"><h2><i class="fas fa-dumbbell"></i> healthylife</h2></a>
-                </div>
-                <ul class="nav">
-					<li><a href="./pages/login/join.html">가입</a></li>
-                    <li><a href="./pages/login/login.html">로그인</a></li>
-                    <li><a href="./pages/menu/bmi.html">self 건강진단</a></li>
-                    <li><a href="./pages/menu/map.html">장소검색</a></li>
-                    <li><a href="./pages/menu/weather.html">운동날씨</a></li>
-                </ul>
-            </div>
-        </div>
 		</header>
 
-		<footer>
-			<!-- 푸터위치 조정 해야함 -->
-				<!-- <p>(주)Healthylife<br/>
-					인천광역시 남동구 (구월동)<br/>
-					ONKRTRADING Co.,Ltd. ⓒ All rights reserved.<br/>
-				</p>  -->
+        <footer class="footer">
+			<p>© 2021 Healthylife by kimyeseul</p>
 		</footer>
-
 
 	<!--js 파일-->
 	<script src="js/jquery-3.6.0.min.js"></script>
 	<script src="js/clock.js"></script>
 	<script src="js/main.js"></script>
 	<!-- <script src="js/common.js"></script> -->
-
 </body>
 </html>
 
