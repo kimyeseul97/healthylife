@@ -60,7 +60,7 @@
 
 /* 태블릿 */
 /* 680이상 12804이하*/
-  @media screen and (min-width:680px) and (max-width:1150px) {
+  @media screen and (min-width:680px) and (max-width:1124px) {
     #content h1{
         font-size: 35px;
     }
@@ -73,13 +73,6 @@
     }
    }
 
-   /* 최대 1024이하일때 */
-  @media screen and (max-width:1024px) {
-    .bg {
-        left: 50%;
-        margin-left: -512px;
-    }
-} 
 
 /* 창크기 280이하 일때 */
 @media screen and (max-width:280px) {

@@ -23,7 +23,7 @@
   height: 400px;
   width: 400px;
   border-radius: 10px;
-  background-color: rgba(196, 196, 196, 0.233);
+  background-color: rgba(255, 255, 255, 0.233);
 
       /* 열정렬 */
       vertical-align: middle;
@@ -61,10 +61,12 @@
 .imgBox {
   width: 400px;
   border-radius: 10px;
-  background-color: rgba(160, 124, 124, 0.233);
+  background-color: rgba(255, 255, 255, 0.233);
         /* 열정렬 */
         vertical-align: middle;
         display: table-cell;
+padding-left: 50px;
+padding-right: 50px;
 }
 
 .imgBox img {
@@ -72,13 +74,12 @@
   height: 200px;
 }
 
-#rain img{
-  width: 450px;
-  height: 400px;
-}
-
 #sun img{
-  width: 450px;
+  width: 500px;
+  height: 490px;
+}
+#rain img{
+  width: 485px;
   height: 400px;
 }
 
@@ -102,6 +103,9 @@
   #content {
     margin: auto;
   }
+  .imgBox {
+    display: none;
+  }
 }
 
 /* 태블릿 */
@@ -110,11 +114,20 @@
   #content {
     margin: auto;
   }
+
 }
 
 /* 최대 1024이하일때 */
 @media screen and (max-width:1280px) {
   #content {
     margin: auto;
+  }
+  #sun img{
+    width: 500px;
+    height: 490px;
+  }
+  #rain img{
+    width: 485px;
+    height: 400px;
   }
 }

@@ -38,8 +38,19 @@
     </br>
 
 <!-- 카카오맵 -->
-    <div class="map_wrap">
-        <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>    
+<div class="map_wrap">
+    <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>    
+        <!-- <div id="menu_wrap" class="bg_white">
+            <div class="option">
+                <div>
+                    <form onsubmit="searchPlaces(); return false;">
+                        키워드 : <input type="text" value="인천건강검진센터" id="keyword" size="15"> 
+                        <button type="submit">SEARCH</button> 
+                    </form>
+                </div>
+            </div>
+            <hr> -->
+        </br>
             <div id="menu_wrap" class="bg_white">
                 <div class="option">
                     <div>
@@ -48,16 +59,16 @@
                             <button type="submit">SEARCH</button> 
                         </form>
                     </div>
-                </div>
-                <hr>
-                <ul id="placesList"></ul>
-                <div id="pagination"></div>
             </div>
-        </div>
+        </br>
+            <ul id="placesList"></ul>
+            <div id="pagination"></div>//
+    </div>
 
-        <footer class="footer">
-            <p>© 2021 Healthylife by kimyeseul</p>
-        </footer>
+    <footer class="footer">
+        <p>© 2021 Healthylife by kimyeseul</p>
+    </footer>
+
 
 
 	<!--js 파일-->

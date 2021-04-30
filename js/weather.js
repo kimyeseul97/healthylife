@@ -60,34 +60,13 @@ $(document).ready(function(){
   		// alert("참")/
 		  $("#rain").attr('style', 'display:show');
 		  $("#sun").attr('style','display:none');
-
+		  $("#rain").bxSlider();
     } else  {
-    //   alert("아니다")	
+    //   alert("아니다")
 		  $("#rain").attr('style', 'display:none');
 		  $("#sun").attr('style','display:show');
+		  $("#sun").bxSlider();	
 	}
 });
 
 
-// $(document).ready(function(){
-// 	if(icon.value=='cloud') {
-//   		// alert("참")/
-// 		  $("#rain").attr('style', 'display:show');
-// 		  $("#sun").attr('style','display:none');
-
-//     } else  {
-//     //   alert("아니다")	
-// 		  $("#rain").attr('style', 'display:none');
-// 		  $("#sun").attr('style','display:show');
-// 	}
-// });
-
-
-//사진 액션
-$(document).ready(function(){
-    $("#rain").bxSlider();
-  });
-
-  $(document).ready(function(){
-    $("#sun").bxSlider();
-  });
