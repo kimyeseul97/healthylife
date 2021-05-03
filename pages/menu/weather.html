@@ -8,17 +8,6 @@
 <link rel="stylesheet" href="../../css/weather.css">
 <link rel="stylesheet" href="../../library/fontawesome-free-5.15.3-web/css/all.min.css">
 <link rel="stylesheet" href="../../library/bxslider-4-4.2.12/dist/jquery.bxslider.min.css">
-<style>
-	#sun img{
-		width: 500px;
-		height: 490px;
-	}
-	#rain img{
-		width: 485px;
-		height: 400px;
-	}
-</style>
-
 </head>
 
 	<body>
@@ -27,6 +16,21 @@
 					<div class="logo">
 						<a href="../../index.html"><h2><i class="fas fa-dumbbell"></i> healthylife</h2></a>
 					</div>
+					<div class="menu">
+						<div class="trigger">
+							<a href="#"><i class="fas fa-bars"></i></a>
+						</div>
+							<ul class="ham_box">
+								<li><a href="../../pages/login/join.html">가입</a></li>
+								<li><a href="../../pages/login/login.html">로그인</a></li>
+								<li><a href="../../pages/menu/bmi.html">self건강진단</a></li>
+								<li><a href="../../pages/menu/map.html">장소검색</a></li>
+								<li><a href="../../pages/menu/weather.html">운동날씨</a></li>
+								<div class="exit">
+									<a href="#"><i class="far fa-times-circle" style="color: rgb(15, 15, 15); padding-left: 10px;"></i></a>
+								</div>
+							</ul>
+						</div>
 					<ul class="nav">
 						<li><a href="../../pages/login/join.html">가입</a></li>
 						<li><a href="../../pages/login/login.html">로그인</a></li>
@@ -75,17 +79,20 @@
 			<h2>오늘의 추천운동</h2>
 		</br>
 			<div id="rain">
-				<img src="../../images/yoga.jpg" alt="">
-				<img src="../../images/runningmachine.jpg" alt="">
-				<img src="../../images/swim.jpg" alt="">
+				<img src="../../images/yoga.jpg" >
+				<img src="../../images/runningmachine.jpg" >
+				<img src="../../images/swim.jpg">
+				<img src="../../images/trainning.jpg">
 			</div>
 
 			<!-- 맑을때 -->
 			<div id="sun">
-				<img src="../../images/run.jpg" alt="">
-				<img src="../../images/tracking.jpg" alt="">
-				<img src="../../images/golf.webp" alt="">
+				<img src="../../images/golf.jpg" >
+				<img src="../../images/tracking.jpg">
+				<img src="../../images/hiking.jpg">
+				<img src="../../images/run.jpeg">
 			</div>
+
 		</section>
 </div>
 
@@ -100,17 +107,6 @@
 	<script src="../../library/bxslider-4-4.2.12/dist/jquery.bxslider.js"></script>
 	<!-- 사용자 정의 스크립트 사용을 위한 설정 -->
 	<script src="../../js/weather.js"></script>
-	<!-- <script src="js/common.js"></script> -->
-
-	<!-- <script>
-		$(document).ready(function(){
-		$("#rain").bxSlider();
-		});
-	
-		$(document).ready(function(){
-		$("#sun").bxSlider();
-		});
-	</script> -->
-
+	<script src="../../js/common.js"></script>
 </body>
 </html>
