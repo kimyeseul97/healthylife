@@ -143,7 +143,6 @@
         display: none;
     }
     .menu .trigger a{ 
-        display: show;
         float: right;
     }
 }
@@ -153,7 +152,7 @@
 /* 태블릿 */
   @media screen and (min-width:541px) {
     .gnb{
-        display: relative;
+        position: relative;
         width:auto;
     }
     .menu .trigger a { 
@@ -165,7 +164,6 @@
   /* pc */
   @media screen and (min-width:1024px) {
     .gnb{
-        display: show;
         width:auto;
     }
   }
