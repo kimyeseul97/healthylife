@@ -24,7 +24,6 @@
   width: 400px;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.233);
-
       /* 열정렬 */
       vertical-align: middle;
       display: table-cell;
@@ -60,6 +59,7 @@
 
 .imgBox {
   width: 400px;
+  height: 100px;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.233);
         /* 열정렬 */
@@ -69,18 +69,16 @@ padding-left: 50px;
 padding-right: 50px;
 }
 
-.imgBox img {
-  width: 400px;
-  height: 200px;
+#sun img{
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
-#sun img{
-  width: 500px;
-  height: 490px;
-}
 #rain img{
-  width: 485px;
-  height: 400px;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 
@@ -106,6 +104,9 @@ padding-right: 50px;
   .imgBox {
     display: none;
   }
+  .weater {
+    display: relative;
+  }
 }
 
 /* 태블릿 */
@@ -114,7 +115,6 @@ padding-right: 50px;
   #content {
     margin: auto;
   }
-
 }
 
 /* 최대 1024이하일때 */
@@ -131,3 +131,7 @@ padding-right: 50px;
     height: 400px;
   }
 }
+
+
+
+

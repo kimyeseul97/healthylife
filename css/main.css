@@ -50,33 +50,38 @@
          font-size: 24px;
      }
      #clock{
-        font-size: 21px;
+        font-size: 25px;
+        padding-top: 30px;
      }
-     .bg {
-        width: auto;
-        height: auto;
+    .bg {
+        /* width: auto;
+        height: auto; */
+            margin-left: -280px;
+    }
+
+    .footer p{
+        font-size: 15px;
     }
   }
 
 /* 태블릿 */
 /* 680이상 12804이하*/
-  @media screen and (min-width:680px) and (max-width:1124px) {
+  @media screen and (min-width:540px) and (max-width:768px) {
     #content h1{
         font-size: 35px;
     }
     #clock{
        font-size: 35px;
-    }
-    .bg {
-        width: auto;
-        height: auto;
+       padding-top: 45px;
     }
    }
 
-
-/* 창크기 280이하 일때 */
-@media screen and (max-width:280px) {
+@media screen and (min-width:768px) {
     #clock{
-        padding-top: 30px;
-     }
-} 
+       font-size: 50px;
+       padding-top: 0px;
+    }
+    .bg{
+        margin: auto;
+    }
+}

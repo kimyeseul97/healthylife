@@ -17,34 +17,27 @@ $(function(){
 			var weather = result.weather;
 			//온도 - 객체
 			var main = result.main;
-			
 			//국가명
 			var country = sys.country;
-			
 			//현재, 최고 , 최저 기온 가져오기
 			var temp = main.temp;
 			var temp_min = main.temp_min;
 			var temp_max = main.temp_max;
-			
 			//구름상태, 날씨상태 코드, 날씨 아이콘 정보
 			var wid = weather[0].id;
 			var icon = weather[0].icon;
-			
 			//아이콘 가져오기
 			var icon_url = 
 				"https://openweathermap.org/img/w/" + icon;
 					
 			//데이터 출력
 			//도시이름과 국가를 출력
-			$(".city").html(name + "/" + country);
-		
+			$(".city").html(name + "/" + country);	
 			//도시이름과 국가를 출력
 			$(".weather").html(result.weather);
-
 			//아이콘 출력
 			$(".icon").html("<img src='" + 
 					icon_url + ".png'/>");
-
 			//온도 출력
 			$(".temp").html('현재기온:' + 	parseInt((temp-273.15)) + '&deg;');
 			$(".temp_max").html('최고기온:' +	parseInt((temp_max-273.15)) + '&deg;');
@@ -53,6 +46,23 @@ $(function(){
 		}
 	});
 });
+
+
+//자동슬라이드 이미지
+$(document).ready(function(){ 
+	$('#sun',"#run").bxSlider({ 
+		auto: true, 
+		speed: 500, 
+		pause: 4000, 
+		mode:'fade', 
+		// 시작 중지 버튼을 보여지게 합니다.
+		autoControls: false, 
+		//페이지 바로가기 버튼을 보여지게 합니다.
+		pager:false, 
+	}); 
+	});
+
+
 
 //조건에 맞는 운동 추천
 $(document).ready(function(){
@@ -65,7 +75,7 @@ $(document).ready(function(){
     //   alert("아니다")
 		  $("#rain").attr('style', 'display:none');
 		  $("#sun").attr('style','display:show');
-		  $("#sun").bxSlider();	
+		  $("#sun").bxSlider('auto:true', 'speed:500');
 	}
 });
 
