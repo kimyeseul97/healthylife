@@ -26,7 +26,7 @@ var myChart = new Chart(ctx, {
         }]
     },
     options: {
-        responsive: false,
+        responsive: true,
         scales: {
             y: {
                 beginAtZero: true
@@ -57,7 +57,7 @@ data: {
     }]
 },
 options: {
-    responsive: false,
+    responsive: true,
     scales: {
         y: {
             beginAtZero: true
