@@ -50,17 +50,18 @@ $(function(){
 
 //자동슬라이드 이미지
 $(document).ready(function(){ 
-	$('#sun',"#run").bxSlider({ 
+	$("#sun").bxSlider({ 
 		auto: true, 
 		speed: 500, 
-		pause: 4000, 
+		pause: 4000,
 		mode:'fade', 
 		// 시작 중지 버튼을 보여지게 합니다.
 		autoControls: false, 
 		//페이지 바로가기 버튼을 보여지게 합니다.
 		pager:false, 
 	}); 
-	});
+});
+
 
 
 
