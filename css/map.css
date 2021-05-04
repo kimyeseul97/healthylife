@@ -4,6 +4,28 @@
   margin-top: 50px;
 }
 
+.map_wrap  .map_open a i {
+  color: rgb(106, 121, 255);
+  font-size: 40px;
+  position: relative;
+  float: left;
+  margin-left: 5px;
+}
+
+.map_wrap  .map_close a i {
+  color: rgb(106, 121, 255);
+  font-size: 40px;
+  position: relative;
+  float: left;
+  margin-left: 10px;
+}
+
+.map_wrap #menu_wrap {
+  height: 400px;
+  width: 300px;
+  margin-top: 50px;
+}
+
  /* 창크기조절 */
 
  /* 스마트폰 */
@@ -13,9 +35,15 @@
     margin: auto;
     width: auto;
   }
+  .map_wrap {
+    width: auto;
+    height: auto;
+  }
   .map_wrap #menu_wrap {
-    height: 400px;
-    width: 200px;
+    height: 200px;
+    width: 270px;
+    display: none;
+    margin-top: 50px;
   }
 }
 
@@ -26,5 +54,46 @@
     margin: auto;
     width: auto;
   }
+  .map_wrap {
+    width: auto;
+    height: auto;
+  }
+  .map_wrap  .map_open {
+    display: none;
+  }
+  .map_wrap .map_close {
+    display: none;
+  }
 }
 
+/* 690이상 1024이하*/
+@media screen and (min-width:1150px){
+  .map_wrap  .map_open {
+    display: none;
+  }
+  .map_wrap  .map_close {
+    display: none;
+  }
+}
+
+<<<<<<< HEAD
+
+/* .option button{
+  font-size: 18px;
+  width:180px;
+  height:40px;
+  color:rgb(139, 139, 139);
+  border: 0px;
+  border-radius: 4px;
+  background: rgb(254, 255, 222);
+}
+
+.option input{
+  background: rgb(255, 255, 255);
+  border: 0px;
+  border-radius: 4px;
+  width:150px;
+  height:30px;
+} */
+=======
+>>>>>>> 61312f9e11e9f8cb613a9830afbab05517a0df8d

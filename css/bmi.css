@@ -129,19 +129,23 @@
  /* 스마트폰 */
 /* 창크기 최대 680이하일떄 */
 @media screen and (max-width:680px) {
-
+  .content #Bmi{
+    margin: 0 auto;
+  }
 }
+
 /* 태블릿 */
 /* 680이상 1150이하*/
-@media screen and (min-width:680px) and (max-width:1150px) {
-  * {
-    margin: auto;
+@media screen and (min-width:540px) and (max-width:1150px) {
+  .content #Bmi{
+    margin: 0 auto;
   }
   .content {
     display: table;
   }
   #add, #add_two, #left{
     margin: 0 auto ;
+    width: auto;
   }
 }
 
@@ -153,16 +157,22 @@
 }
 
 /* 창크기 280이하 일때 */
-@media screen and (max-width:280px) {
+@media screen and (max-width:540px) {
   .content {
-    margin: auto;
+    margin: 0 auto;
+  }
+  #add, #add_two, #left{
+    margin: 0 auto ;
+    width: auto;
   }
 }
 
+
 /* 창크기 280이하 일때 */
-@media screen and (min-width:1200px) {
-  .content {
-    size: 1px;
-    margin: auto;
+@media screen and (max-width:280px) {
+  #add_two{
+    margin: 0 auto ;
+    width: auto;
+    height: 800px;
   }
 }

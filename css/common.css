@@ -9,12 +9,36 @@
 
 /* 햄버거바 메뉴 */
 .menu .trigger a {
-    color: aliceblue;
+    color: rgb(255, 255, 255);
     float: right;
     width: 30px;
     height: 30px;
     margin-top: 5px;
 }
+
+/* 햄버거바 메뉴 박스 */
+.menu .ham_box {
+    position:fixed;
+    top:70px;
+    right:0;
+    width:130px;
+    height:180px;
+    background-color:#ffe1e1;
+    padding-top:5px;
+    z-index: 1;
+    opacity: 80%;
+    display: none;
+}
+
+.menu .ham_box li a {
+    color: rgb(143, 143, 143);
+    font-size: 17px;
+    text-align: right;
+    font-weight: bold;
+    display: block;
+}
+
+
 
 
 .gnb {
@@ -85,7 +109,6 @@
 
  .footer {
     background-color: rgb(231, 231, 231);
-    margin-top: 4px;
     width: 100%;
     height: 110px;
     position: relative;
@@ -118,14 +141,13 @@
     .gnb .logo h2{
         font-size: 10px;
      } 
-    .gnb ul > li {
+    .gnb .nav {
         display: none;
     }
     .menu .trigger a{ 
         display: show;
         float: right;
     }
-
 }
 
 
