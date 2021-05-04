@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 var ctx = document.getElementById('myChart');
 var myChart = new Chart(ctx, {
     type: 'bar',
@@ -66,7 +65,8 @@ options: {
     }
 }
 });
-=======
+
+
 var ctx = document.getElementById('myChart');
 var myChart = new Chart(ctx, {
     type: 'bar',
@@ -134,4 +134,3 @@ options: {
     }
 }
 });
->>>>>>> 77d8b195f9398cb3cea2b2ae8b65f07163918efc
