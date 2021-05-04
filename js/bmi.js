@@ -6,7 +6,7 @@ function buttonClick(){
 let height = document.getElementById("height");
 let weight = document.getElementById("weight");
 let bmi = document.getElementById("bmi");
-let button = document.getElementById("button");
+let button = document.getElementById("btn");
 let bmiValue;
 
 button.onclick = buttonClick;

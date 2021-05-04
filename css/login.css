@@ -1,12 +1,11 @@
 @charset "utf-8";
     .container{
-        width: 100vw;
+        width: 100% !important; 
         height: 100vh;
         background: #eff0f2;
         display: flex;
         justify-content: center;
         align-items: center;
-
     }
 
     .login_container{

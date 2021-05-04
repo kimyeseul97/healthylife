@@ -15,7 +15,8 @@
 #content h1{
     font-size:60px; 
     text-align:right;
-    color: rgb(240, 240, 240);
+    color: rgb(255, 255, 255);
+    text-shadow:1px 1px 1px;
 
     /* 홈페이지 가운데 정렬 */
     position:absolute;
@@ -27,14 +28,15 @@
 /* 시계*/
 #clock{
     color:rgb(255, 255, 255);
-    font-size:65px; 
+    font-size:px; 
     text-align:right;
     /* 홈페이지 가운데 정렬 */
     position:absolute;
-    top:55%;
+    top:57%;
     left:50%;
     transform:translate(-50%, -50%);
 }
+
 
 
 
